@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as BiIcons from "react-icons/bi";
+import * as GiIcons from "react-icons/gi";
 import { IconContext } from "react-icons/lib";
 import pic from "../../images/picformal.png";
 import "./Navbar.css";
@@ -23,8 +24,8 @@ const Navbar = () => {
             <nav className={openSidebar ? "sidebar" : "sidebar close"}>
                {/* sidebar logo  */}
                <div className="sidebar_logo">
-                  <BiIcons.BiCarousel />
-                  <span className="logo_name">FancyBar</span>
+                  <GiIcons.GiAirplaneDeparture />
+                  <span className="logo_name">Adventure</span>
                </div>
                <IconContext.Provider value={{ color: "#fff", size: "2rem" }}>
                   {/* slick sidebar container  */}

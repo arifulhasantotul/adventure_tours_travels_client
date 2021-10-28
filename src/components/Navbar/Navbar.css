@@ -63,7 +63,6 @@
    display: flex;
    align-items: center;
    text-align: center;
-   /* line-height: 10rem; */
    margin-left: 2.7rem;
    padding: 3rem 0 1.5rem 0;
 }
@@ -79,7 +78,10 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin-left: 1.7rem;
+}
+.sidebar .nav_menu_items .menu_row {
+   display: flex;
+   align-items: center;
 }
 .sidebar .nav_menu_items .nav_link {
    padding: 1.5rem 0;

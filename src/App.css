@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
 
 :root {
+   --orange: #ffa500;
    --sidebar_bg: #333;
    --gray: #a4b2bc;
    --white: #fff;
    --content_bg: #e4e9f7;
    --light_dark: rgba(0, 0, 0, 0.5);
+   --light-color: #666;
+   --fade-white: #eee;
+   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+   --card-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 *,
@@ -17,8 +23,14 @@
    font-family: "Nunito", sans-serif;
    scroll-behavior: smooth;
 }
+*::selection {
+   background: var(--orange);
+   color: var(--white);
+}
 html {
    font-size: 62.5%;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6rem;
 }
 a {
    text-decoration: none;
