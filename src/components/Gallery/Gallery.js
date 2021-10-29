@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import GalleryItem from "../GalleryItem/GalleryItem";
+import SkeletonPackages from "../Skeleton/SkeletonPackages";
 import "./Gallery.css";
 
 const Gallery = () => {
-   const [photos, setPhotos] = useState([]);
+   const [photos, setPhotos] = useState(null);
 
    useEffect(() => {
       fetch("https://infinite-mountain-42809.herokuapp.com/gallery")
@@ -23,9 +24,14 @@ const Gallery = () => {
          </h1>
 
          <article className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-            {photos.map((item) => (
-               <GalleryItem key={item.key} photos={item}></GalleryItem>
-            ))}
+            {photos &&
+               photos.map((item) => (
+                  <GalleryItem key={item.key} photos={item}></GalleryItem>
+               ))}
+            {!photos &&
+               [1, 2, 3, 4, 5, 6].map((n) => (
+                  <SkeletonPackages key={n} theme="light" />
+               ))}
          </article>
       </section>
    );
