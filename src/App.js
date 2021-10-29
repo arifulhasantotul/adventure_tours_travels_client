@@ -11,6 +11,7 @@ import Services from "./components/Services/Services";
 import AuthProvider from "./contexts/AuthProvider";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 function App() {
    return (
@@ -37,6 +38,9 @@ function App() {
                   </Route>
                   <Route path="/login">
                      <Login></Login>
+                  </Route>
+                  <Route path="/register">
+                     <Register></Register>
                   </Route>
                   <Route path="*">
                      <NotFound></NotFound>

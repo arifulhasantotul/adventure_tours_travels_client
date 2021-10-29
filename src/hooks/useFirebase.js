@@ -25,7 +25,7 @@ const useFirebase = () => {
       return signInWithPopup(auth, googleProvider);
    };
 
-   const registerUsingEmail = (email, password, checkPassword) => {
+   const registerUserEmail = (email, password, checkPassword) => {
       if (password.length < 8) {
          setError("Password should be more then 8 characters");
          return;
@@ -34,7 +34,6 @@ const useFirebase = () => {
          setError("Both password should be same");
          return;
       }
-
       return createUserWithEmailAndPassword(auth, email, password);
    };
 
@@ -73,7 +72,7 @@ const useFirebase = () => {
       setError,
       isLoading,
       setIsLoading,
-      registerUsingEmail,
+      registerUserEmail,
       signInUsingEmail,
       signInUsingGoogle,
       handleLogout,

@@ -3,19 +3,47 @@ import { useForm } from "react-hook-form";
 import * as FcIcons from "react-icons/fc";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import "./Login.css";
+import "../Login/Login.css";
 
-const Login = () => {
+const Register = () => {
    const history = useHistory();
    const location = useLocation();
 
    const {
       error,
       setError,
-      setIsLoading,
-      signInUsingEmail,
       signInUsingGoogle,
+      registerUserEmail,
+      setIsLoading,
    } = useAuth();
+
+   const redirect_url = location.state?.from || "/home";
+
+   const handleGoogleSignIn = () => {
+      setIsLoading(true);
+      signInUsingGoogle()
+         .then((result) => {
+            history.push(redirect_url);
+            setError("");
+         })
+         .catch((error) => {
+            setError(error.message);
+         })
+         .finally(() => setIsLoading(false));
+   };
+
+   const handleCreateEmail = (email, password, checkPassword) => {
+      registerUserEmail(email, password, checkPassword)
+         .then((result) => {
+            const user = result.user;
+            console.log(user);
+            history.push("/login");
+            setError("");
+         })
+         .catch((error) => {
+            setError(error.message);
+         });
+   };
 
    const {
       register,
@@ -23,48 +51,39 @@ const Login = () => {
       formState: { errors },
    } = useForm();
 
-   const redirect_uri = location.state?.from || "/home";
-
-   const handleGoogleSignIn = () => {
-      setIsLoading(true);
-      signInUsingGoogle().then((result) => {
-         console.log(result.user);
-         history.push(redirect_uri);
-         setError("");
-      });
-   };
-
-   const handleSignInUsingEmail = (email, password) => {
-      signInUsingEmail(email, password)
-         .then((result) => {
-            history.push(redirect_uri);
-            setError("");
-         })
-         .catch((error) => {
-            setError(error.message);
-         })
-         .finally(() => {
-            setIsLoading(false);
-         });
-   };
-
    const onSubmit = (data) => {
       console.log(data);
-      handleSignInUsingEmail(data.email, data.password);
+      handleCreateEmail(
+         data.email,
+         data.password,
+         data.checkPassword,
+         data.displayName
+      );
    };
    return (
       <div className="container-fluid form_wrapper">
          <h1 className="heading">
-            <span>l</span>
-            <span>o</span>
+            <span>r</span>
+            <span>e</span>
             <span>g</span>
             <span>i</span>
-            <span>n</span>
+            <span>s</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
          </h1>
-         <h4>Login to See Private Pages</h4>
          {error && <div style={{ color: "red" }}></div>}
          <form className="form_login" onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
+            <input
+               placeholder="Name"
+               type="name"
+               {...register("displayName", { required: true })}
+            />
+
+            {errors.displayName && (
+               <span className="error"> Name is required</span>
+            )}
             <input
                placeholder="Email"
                type="email"
@@ -83,10 +102,21 @@ const Login = () => {
             {errors.password && (
                <span className="error">Password is required</span>
             )}
+            <input
+               placeholder="Re-password"
+               type="password"
+               {...register("checkPassword", { required: true })}
+            />
+            {/* errors will return when field validation fails  */}
+            {errors.checkPassword && (
+               <span className="error">Re-password is required</span>
+            )}
 
-            <input type="submit" value="Login" />
+            {error && <div style={{ color: "red" }}> {error}</div>}
+
+            <input type="submit" />
             <p>
-               don't have account? <Link to="/register">Create one</Link>
+               already have an account? <Link to="/login">login</Link>
             </p>
          </form>
          <p>or</p>
@@ -103,4 +133,4 @@ const Login = () => {
    );
 };
 
-export default Login;
+export default Register;
