@@ -6,7 +6,7 @@ const Packages = () => {
    const [packages, setPackages] = useState([]);
 
    useEffect(() => {
-      fetch("http://localhost:8080/packages")
+      fetch("https://infinite-mountain-42809.herokuapp.com/packages")
          .then((res) => res.json())
          .then((data) => setPackages(data));
    }, []);
