@@ -44,3 +44,9 @@
 .footer .credit span {
    color: var(--orange);
 }
+@media (max-width: 450px) {
+   .footer_wrapper {
+      padding-left: 3%;
+      text-align: center;
+   }
+}

@@ -10,9 +10,12 @@ const Footer = () => {
             <article class="box">
                <h3>About us</h3>
                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente explicabo perspiciatis eligendi illo at perferendis
-                  consequatur id alias aliquid natus?
+                  We are a full-service best travel agency in Cumilla,
+                  Bangladesh with a dedicated team of highly skilled and
+                  experienced people to assist our valuable clients according to
+                  their goals and desired journeys all over the world. We at
+                  Adventure travels and tours strive our best to deliver the
+                  outstanding service to all our customers.
                </p>
             </article>
 

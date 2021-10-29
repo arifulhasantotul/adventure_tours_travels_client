@@ -41,3 +41,8 @@
    font-size: 1.7rem;
    color: var(--orange);
 }
+@media (max-width: 450px) {
+   .gallery_wrapper .box {
+      padding-left: 6%;
+   }
+}
