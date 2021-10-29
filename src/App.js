@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./Pages/Dashboard/Dashboard";
@@ -23,6 +24,7 @@ function App() {
                   <Dashboard></Dashboard>
                </Route>
             </Switch>
+            <Footer></Footer>
          </Router>
       </>
    );

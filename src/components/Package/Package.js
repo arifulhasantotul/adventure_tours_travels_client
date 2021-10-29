@@ -35,34 +35,6 @@ const Package = (props) => {
             </div>
          </div>
       </div>
-      // <div className="package box col-12 col-md-6 col-lg-3 m-3 ">
-      //    <img src={img} alt="" />
-
-      //    {/* content start  */}
-      //    <div className="content">
-      //       <h3>
-      //          {" "}
-      //          <span className="location_icon">
-      //             <MdIcons.MdLocationPin />
-      //          </span>{" "}
-      //          <span>{name}</span>
-      //       </h3>
-      //       <p>{description.slice(0, 90)}...</p>
-      //       <div className="box_star">
-      //          <Rating
-      //             initialRating={rating}
-      //             emptySymbol={<FaIcons.FaRegStar />}
-      //             fullSymbol={<FaIcons.FaStar />}
-      //             readonly
-      //          />
-      //       </div>
-      //       <div className="price">
-      //          {" "}
-      //          ${discountPrice} <span>${previousPrice}</span>
-      //       </div>
-      //       <button className="btn_book">Book Now</button>
-      //    </div>
-      // </div>
    );
 };
 
