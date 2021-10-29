@@ -1,0 +1,45 @@
+[
+   {
+      "key": 1,
+      "name": "Affordable hotel",
+      "rating": 4.5,
+      "description": "What if we told you that you could score a room for less than $250 a night in some of the world’s most popular destinations—think Hawaii, Barcelona, and New York City—and have it come with a stunning view?",
+      "img": "https://i.ibb.co/fCfFc2v/s-1.png"
+   },
+   {
+      "key": 2,
+      "name": "Safety Guide",
+      "rating": 4.5,
+      "description": "Travel can be an exciting, eye-opening experience. It’s easy to get caught up in the thrill of adventure. But don’t forget about travel security and safety considerations while you’re abroad.",
+      "img": "https://i.ibb.co/Ht5G9w3/s-2.png"
+   },
+
+   {
+      "key": 3,
+      "name": "Around the world",
+      "rating": 4.2,
+      "description": "Leaving to travel around the world was simply the best decision of our lives! There are many factors to keep in mind when evaluating your trip, including what to do before leaving and your budget. To help you get started, we’ve put together a guide on how to travel the world, including everything from how to start looking into your trip to how to save money once you’re abroad.",
+      "img": "https://i.ibb.co/YBLVmHv/s-3.png"
+   },
+   {
+      "key": 4,
+      "name": "Fastest Travel",
+      "rating": 4.3,
+      "description": "We are a full-service best travel agency in Cumilla, Bangladesh with a dedicated team of highly skilled and experienced people to assist our valuable clients according to their goals and desired journeys all over the world. We at Adventure travels and tours strive our best to deliver the outstanding service to all our customers. We are always ready to accommodate you whether you are looking for visa consultancy, air tickets, travel insurance, adventure packages, even if you are looking for a cruise ride or you need reservations in any hotel around the globe we are ready to serve you with market competitive rates. Our goal is to make the customer feel the adventure as they travel with us and so “You Can Buy Yourself The Freedom” that would make us feel honored.",
+      "img": "https://i.ibb.co/TgWJ3N6/s-4.png"
+   },
+   {
+      "key": 5,
+      "name": "Adventures",
+      "rating": 4.5,
+      "description": "An adventure is an exciting experience or undertaking that is typically bold, sometimes risky. Adventures may be activities with some potential for physical danger such as traveling, exploring, skydiving, mountain climbing, scuba diving, river rafting or participating in extreme sports.",
+      "img": "https://i.ibb.co/3v52sdh/s-5.png"
+   },
+   {
+      "key": 6,
+      "name": "Travel Insurance",
+      "rating": 4.7,
+      "description": "You should always arrange insurance before you begin your travel. If, after you begin travel, you find your insurance has expired or you have forgotten to buy insurance, you may be able to buy specialist insurance in this situation. This depends on your circumstances at the time, including whether you are already intending to make a claim. A waiting period may be applied to your policy which prevents you from making a claim immediately.",
+      "img": "https://i.ibb.co/wLMyWdy/s-6.png"
+   }
+]
