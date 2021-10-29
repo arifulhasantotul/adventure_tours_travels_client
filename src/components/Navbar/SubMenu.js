@@ -17,7 +17,7 @@ const SubMenu = (props) => {
             activeClassName="selected"
             onClick={subNav && showDropDownMenu}
          >
-            <div>
+            <div className="d-flex align-items-center">
                {icon} <span className="link_name">{title}</span>
             </div>
             <div className="arrow">

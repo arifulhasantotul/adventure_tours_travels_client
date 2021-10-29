@@ -11,7 +11,7 @@ const Services = () => {
    }, []);
    return (
       <section className="container-fluid package_wrapper">
-         <h1 class="heading">
+         <h1 className="heading">
             <span>s</span>
             <span>e</span>
             <span>r</span>

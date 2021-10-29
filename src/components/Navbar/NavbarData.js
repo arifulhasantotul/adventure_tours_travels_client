@@ -1,9 +1,5 @@
 import React from "react";
 import * as BiIcons from "react-icons/bi";
-import * as FaIcons from "react-icons/fa";
-import * as ImIcons from "react-icons/im";
-import * as IoIcons from "react-icons/io";
-import * as SiIcons from "react-icons/si";
 
 export const SidebarData = [
    {
@@ -15,90 +11,37 @@ export const SidebarData = [
    },
    {
       id: 2,
-      title: "Dashboard",
+      title: "Packages",
       tClass: "nav_link",
-      path: "/dashboard",
+      path: "/packages",
       icon: <BiIcons.BiCollection />,
       iconClosed: <BiIcons.BiChevronDown />,
       iconOpened: <BiIcons.BiChevronUp />,
    },
    {
       id: 3,
-      title: "Category",
+      title: "Gallery",
       tClass: "nav_link",
-      path: "/categories",
+      path: "/gallery",
       icon: <BiIcons.BiGridAlt />,
       iconClosed: <BiIcons.BiChevronDown />,
       iconOpened: <BiIcons.BiChevronUp />,
-      subNav: [
-         {
-            id: 31,
-            title: "HTML",
-            tClass: "sub_nav_link",
-            path: "/categories/category1",
-            icon: <ImIcons.ImHtmlFive />,
-         },
-         {
-            id: 32,
-            title: "CSS",
-            tClass: "sub_nav_link",
-            path: "/categories/category2",
-            icon: <IoIcons.IoLogoCss3 />,
-         },
-         {
-            id: 33,
-            title: "JavaScript",
-            tClass: "sub_nav_link",
-            path: "/categories/category3",
-            icon: <IoIcons.IoLogoJavascript />,
-         },
-         {
-            id: 34,
-            title: "PHP",
-            tClass: "sub_nav_link",
-            path: "/categories/category4",
-            icon: <FaIcons.FaPhp />,
-         },
-         {
-            id: 35,
-            title: "MySQL",
-            tClass: "sub_nav_link",
-            path: "/categories/category5",
-            icon: <SiIcons.SiMysql />,
-         },
-      ],
+   },
+   {
+      id: 10,
+      title: "Services",
+      tClass: "nav_link",
+      path: "/services",
+      icon: <BiIcons.BiCog />,
    },
    {
       id: 4,
-      title: "Posts",
+      title: "Login",
       tClass: "nav_link",
-      path: "/posts",
+      path: "/login",
       icon: <BiIcons.BiBookAlt />,
       iconClosed: <BiIcons.BiChevronDown />,
       iconOpened: <BiIcons.BiChevronUp />,
-      subNav: [
-         {
-            id: 41,
-            title: "Web Development",
-            tClass: "sub_nav_link",
-            path: "/posts/post1",
-            icon: <BiIcons.BiCodeAlt />,
-         },
-         {
-            id: 42,
-            title: "Login Form",
-            tClass: "sub_nav_link",
-            path: "/posts/post2",
-            icon: <BiIcons.BiDetail />,
-         },
-         {
-            id: 43,
-            title: "Card Design",
-            tClass: "sub_nav_link",
-            path: "/posts/post3",
-            icon: <BiIcons.BiCreditCard />,
-         },
-      ],
    },
    {
       id: 5,
@@ -159,12 +102,5 @@ export const SidebarData = [
       tClass: "nav_link",
       path: "/history",
       icon: <BiIcons.BiHistory />,
-   },
-   {
-      id: 10,
-      title: "Settings",
-      tClass: "nav_link",
-      path: "/settings",
-      icon: <BiIcons.BiCog />,
    },
 ];

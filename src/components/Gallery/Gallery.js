@@ -4,6 +4,7 @@ import "./Gallery.css";
 
 const Gallery = () => {
    const [photos, setPhotos] = useState([]);
+
    useEffect(() => {
       fetch("https://infinite-mountain-42809.herokuapp.com/gallery")
          .then((res) => res.json())
@@ -11,7 +12,7 @@ const Gallery = () => {
    }, []);
    return (
       <section className="container-fluid gallery_wrapper">
-         <h1 class="heading">
+         <h1 className="heading">
             <span>g</span>
             <span>a</span>
             <span>l</span>

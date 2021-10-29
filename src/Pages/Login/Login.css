@@ -1,0 +1,79 @@
+.form_wrapper {
+   text-align: center;
+   padding: 5rem 0 5rem 10%;
+}
+.form_wrapper h4 {
+   color: var(--green);
+   font-size: 2rem;
+   padding: 2rem 0;
+}
+.form_login {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 550px;
+   margin: 0 auto;
+}
+.error {
+   margin: 0 auto;
+   margin-top: -5px;
+   text-align: start;
+   color: #bf1650;
+}
+
+.error::before {
+   display: inline;
+   content: "⚠ ";
+}
+.form_login input {
+   width: 75%;
+   font-size: 2rem;
+   padding: 1rem 2rem;
+   border-radius: 0.5rem;
+   outline: none;
+   border: none;
+   background: var(--fade-white);
+   margin: 1rem auto;
+   border-bottom: 1px solid rgb(79, 98, 148);
+}
+.form_login .box_btn {
+   margin-top: 1rem;
+   display: inline-block;
+   font-size: 1.7rem;
+   color: var(--white);
+   background: var(--black);
+   border-radius: 0.5rem;
+   cursor: pointer;
+   padding: 0.8rem 3rem;
+   transition: all 0.3s ease;
+}
+.form_login .box_btn:hover {
+   background: var(--green);
+   letter-spacing: 0.1rem;
+}
+.form_wrapper p {
+   font-size: 1.5rem;
+}
+.form_wrapper p a:hover {
+   text-decoration: underline;
+}
+.form_wrapper .other_login button {
+   border: none;
+   padding: 0.7rem 1.8rem;
+   margin: 1rem;
+   border-radius: 2rem;
+   background: var(--white);
+}
+.form_wrapper .other_login button:hover {
+   background: rgb(248, 244, 244);
+}
+.form_wrapper .other_login .login_icon {
+   font-size: 5rem;
+}
+
+@media (max-width: 1024px) {
+   .form_wrapper {
+      height: 58vh;
+      padding-left: 12%;
+   }
+}

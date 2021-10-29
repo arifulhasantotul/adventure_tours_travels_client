@@ -7,7 +7,7 @@ const Footer = () => {
       <section className="container-fluid footer">
          <div className="footer_wrapper">
             {/* About us  */}
-            <article class="box">
+            <article className="box">
                <h3>About us</h3>
                <p>
                   We are a full-service best travel agency in Cumilla,
@@ -19,7 +19,7 @@ const Footer = () => {
                </p>
             </article>
 
-            <article class="box">
+            <article className="box">
                <h3>Braanch location</h3>
                <NavLink to="/">India</NavLink>
                <NavLink to="/">Bangladesh</NavLink>
@@ -28,7 +28,7 @@ const Footer = () => {
                <NavLink to="/">France</NavLink>
             </article>
 
-            <article class="box">
+            <article className="box">
                <h3>Quick links</h3>
                <NavLink to="/home">Home</NavLink>
                <NavLink to="/packages">packages</NavLink>
@@ -38,7 +38,7 @@ const Footer = () => {
                <NavLink to="/">Contact</NavLink>
             </article>
 
-            <article class="box">
+            <article className="box">
                <h3>Follow us</h3>
                <NavLink to="/">Facebook</NavLink>
                <NavLink to="/">Instagram</NavLink>
@@ -47,7 +47,7 @@ const Footer = () => {
             </article>
          </div>
          <article>
-            <h1 class="credit">
+            <h1 className="credit">
                &copy; created by <span>md ariful hasan</span> | all right
                reserved.
             </h1>
