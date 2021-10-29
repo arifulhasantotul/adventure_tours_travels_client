@@ -1,0 +1,56 @@
+[
+   {
+      "key": 1,
+      "name": "Mumbai",
+      "discountPrice": "299",
+      "previousPrice": "499",
+      "rating": 4.5,
+      "description": "Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924. Offshore, nearby Elephanta Island holds ancient cave temples dedicated to the Hindu god Shiva. The city's also famous as the heart of the Bollywood film industry.",
+      "img": "https://i.ibb.co/QQwkGcx/p-1.jpg"
+   },
+   {
+      "key": 2,
+      "name": "Hawaii",
+      "discountPrice": "599",
+      "previousPrice": "699",
+      "rating": 4.2,
+      "description": "Hawaii is a state in the Western United States located in the Pacific Ocean about 2,000 miles from the U.S. mainland. It is the only state outside North America, the only state that is an archipelago, and the only state in the tropics.",
+      "img": "https://i.ibb.co/p0Nqc5Q/p-2.jpg"
+   },
+   {
+      "key": 3,
+      "name": "Sydney",
+      "discountPrice": "699",
+      "previousPrice": "799",
+      "rating": 4.3,
+      "description": "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harbourfront Sydney Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
+      "img": "https://i.ibb.co/PZw3d5g/p-3.jpg"
+   },
+   {
+      "key": 4,
+      "name": "Paris",
+      "discountPrice": "499",
+      "previousPrice": "699",
+      "rating": 4.7,
+      "description": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.",
+      "img": "https://i.ibb.co/HGK6xKF/p-4.jpg"
+   },
+   {
+      "key": 5,
+      "name": "Egypt",
+      "discountPrice": "399",
+      "previousPrice": "499",
+      "rating": 4.1,
+      "description": "Egypt, a country linking northeast Africa with the Middle East, dates to the time of the pharaohs. Millennia-old monuments sit along the fertile Nile River Valley, including Giza's colossal Pyramids and Great Sphinx as well as Luxor's hieroglyph-lined Karnak Temple and Valley of the Kings tombs. The capital, Cairo, is home to Ottoman landmarks like Muhammad Ali Mosque and the Egyptian Museum, a trove of antiquities.",
+      "img": "https://i.ibb.co/wJ7CJqQ/p-5.jpg"
+   },
+   {
+      "key": 6,
+      "name": "Tokyo",
+      "discountPrice": "450",
+      "previousPrice": "599",
+      "rating": 4,
+      "description": "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+      "img": "https://i.ibb.co/t2mS9Lp/p-6.jpg"
+   }
+]

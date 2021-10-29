@@ -9,6 +9,7 @@
    --light_dark: rgba(0, 0, 0, 0.5);
    --light-color: #666;
    --fade-white: #eee;
+   --bg_btn__hover: rgba(255, 165, 0, 0.2);
    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
    --card-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -22,6 +23,7 @@
    box-sizing: border-box;
    font-family: "Nunito", sans-serif;
    scroll-behavior: smooth;
+   transition: all 0.2s linear;
 }
 *::selection {
    background: var(--orange);
@@ -48,6 +50,40 @@ li {
 .sidebar.close ~ .header {
    left: 78px;
    max-width: calc(100% - 78px);
+}
+.heading {
+   text-align: center;
+   padding: 2.5rem 0;
+}
+.heading span {
+   font-size: 3.5rem;
+   background: var(--bg_btn__hover);
+   color: var(--orange);
+   border-radius: 0.5rem;
+   padding: 0.2rem 1rem;
+   display: inline-block;
+   text-transform: uppercase;
+   font-weight: 700;
+   margin: 0.5rem;
+}
+.heading span.space {
+   background: none;
+}
+.btn_book {
+   display: inline-block;
+   margin-top: 1rem;
+   background: var(--orange);
+   color: var(--white);
+   padding: 0.8rem 3rem;
+   border: 0.2rem solid var(--orange);
+   cursor: pointer;
+   font-size: 1.7rem;
+   border-radius: 0.5rem;
+}
+
+.btn_book:hover {
+   background: var(--bg_btn__hover);
+   color: var(--orange);
 }
 @media (max-width: 1024px) {
    html {

@@ -2,7 +2,6 @@
    box-shadow: var(--box-shadow);
 }
 .header_navbar {
-   background: var(--white);
    width: 100%;
    padding: 1rem 5% 1rem 2%;
 }
