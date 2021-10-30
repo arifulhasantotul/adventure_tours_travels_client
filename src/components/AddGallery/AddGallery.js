@@ -30,7 +30,7 @@ const AddGallery = () => {
          .then((res) => res.json())
          .then((data) => {
             if (data.insertedId) {
-               alert("Successfully added package.");
+               alert("Successfully added photo.");
                e.target.reset();
             }
          });
@@ -43,13 +43,13 @@ const AddGallery = () => {
             <span>d</span>
             <span>d</span>
             <span className="space"></span>
-            <span>s</span>
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
             <span>e</span>
             <span>r</span>
-            <span>v</span>
-            <span>i</span>
-            <span>c</span>
-            <span>e</span>
+            <span>y</span>
          </h1>
          <form className="form_login" onSubmit={handleSubmit}>
             <input type="text" placeholder="Service Name" ref={nameRef} />
@@ -61,7 +61,7 @@ const AddGallery = () => {
                cols="20"
                rows="5"
             ></textarea>
-            <input type="submit" value="Add Package" />
+            <input type="submit" value="Add Gallery" />
          </form>
       </div>
    );

@@ -30,7 +30,7 @@ const AddServices = () => {
          .then((res) => res.json())
          .then((data) => {
             if (data.insertedId) {
-               alert("Successfully added package.");
+               alert("Successfully added service.");
                e.target.reset();
             }
          });
@@ -61,7 +61,7 @@ const AddServices = () => {
                cols="20"
                rows="5"
             ></textarea>
-            <input type="submit" value="Add Package" />
+            <input type="submit" value="Add Service" />
          </form>
       </div>
    );
