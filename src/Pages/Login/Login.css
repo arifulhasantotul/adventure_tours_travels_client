@@ -28,6 +28,7 @@
    display: inline;
    content: "⚠ ";
 }
+.form_login textarea,
 .form_login input {
    width: 75%;
    font-size: 2rem;

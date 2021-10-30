@@ -45,9 +45,9 @@ export const SidebarData = [
    },
    {
       id: 5,
-      title: "Analytics",
+      title: "Orders",
       tClass: "nav_link",
-      path: "/analytics",
+      path: "/orders",
       icon: <BiIcons.BiPieChartAlt2 />,
    },
    {

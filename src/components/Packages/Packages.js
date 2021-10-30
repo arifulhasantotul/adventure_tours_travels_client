@@ -26,7 +26,7 @@ const Packages = () => {
          <article className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
             {packages &&
                packages.map((item) => (
-                  <Package key={item.key} package={item}></Package>
+                  <Package key={item._id} package={item}></Package>
                ))}
 
             {!packages &&

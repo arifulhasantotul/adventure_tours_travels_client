@@ -1,0 +1,14 @@
+.orders {
+   font-size: 2rem;
+   text-align: center;
+}
+.orders a {
+   margin: 1rem;
+   padding: 0.5rem 1rem;
+   color: var(--sidebar_bg);
+}
+.orders a:hover,
+.orders a.selected {
+   color: var(--orange);
+   text-decoration: underline;
+}
