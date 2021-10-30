@@ -1,0 +1,57 @@
+.personal_order .box {
+   overflow: hidden;
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+   border-radius: 0.5rem;
+   flex: 1 1 30rem;
+   position: relative;
+}
+.personal_order .box img {
+   height: 22rem;
+   width: 100%;
+   object-fit: cover;
+}
+.personal_order .box .content {
+   position: absolute;
+   top: 0%;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.personal_order .box:hover .content {
+   left: 0%;
+}
+.personal_order .box .content h3 {
+   font-size: 2rem;
+   font-weight: 600;
+   color: var(--orange);
+}
+.personal_order .box .content p {
+   font-size: 1.5rem;
+   color: #eee;
+   padding: 0.5rem 0;
+}
+.personal_order .box .content .box_star {
+   font-size: 1.7rem;
+   color: var(--orange);
+}
+.personal_order .box .content .price {
+   font-size: 2.5rem;
+   color: var(--orange);
+   padding-top: 1rem;
+}
+.personal_order .box .content .price span {
+   color: rgb(199, 153, 69);
+   font-size: 1.5rem;
+   text-decoration: line-through;
+}
+@media (max-width: 450px) {
+   .personal_order .box {
+      padding-left: 7%;
+   }
+}
