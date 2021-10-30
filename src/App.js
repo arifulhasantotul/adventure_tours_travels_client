@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import AddGallery from "./components/AddGallery/AddGallery";
 import AddPackages from "./components/AddPackages/AddPackages";
+import AddServices from "./components/AddServices/AddServices";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 import Header from "./components/Header/Header";
@@ -32,16 +34,22 @@ function App() {
                   <Route exact path="/packages">
                      <Packages></Packages>
                   </Route>
-                  <Route path="/gallery">
+                  <Route exact path="/gallery">
                      <Gallery></Gallery>
+                  </Route>
+                  <Route path="/gallery/add">
+                     <AddGallery></AddGallery>
                   </Route>
                   <Route path="/services">
                      <Services></Services>
                   </Route>
+                  <Route path="/service/add">
+                     <AddServices></AddServices>
+                  </Route>
                   <Route exact path="/orders">
                      <Orders></Orders>
                   </Route>
-                  <Route route="/orders/addPackage">
+                  <Route path="/orders/addPackage">
                      <AddPackages></AddPackages>
                   </Route>
                   <Route path="/login">

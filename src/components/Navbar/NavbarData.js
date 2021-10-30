@@ -26,6 +26,22 @@ export const SidebarData = [
       icon: <BiIcons.BiGridAlt />,
       iconClosed: <BiIcons.BiChevronDown />,
       iconOpened: <BiIcons.BiChevronUp />,
+      subNav: [
+         {
+            id: 31,
+            title: "Add Gallery",
+            tClass: "sub_nav_link",
+            path: "/gallery/add",
+            icon: <BiIcons.BiFace />,
+         },
+         {
+            id: 32,
+            title: "Manage Gallery",
+            tClass: "sub_nav_link",
+            path: "/gallery/manage",
+            icon: <BiIcons.BiBrush />,
+         },
+      ],
    },
    {
       id: 10,
@@ -33,6 +49,24 @@ export const SidebarData = [
       tClass: "nav_link",
       path: "/services",
       icon: <BiIcons.BiCog />,
+      iconClosed: <BiIcons.BiChevronDown />,
+      iconOpened: <BiIcons.BiChevronUp />,
+      subNav: [
+         {
+            id: 101,
+            title: "Add Service",
+            tClass: "sub_nav_link",
+            path: "/service/add",
+            icon: <BiIcons.BiFace />,
+         },
+         {
+            id: 102,
+            title: "Manage Service",
+            tClass: "sub_nav_link",
+            path: "/service/manage",
+            icon: <BiIcons.BiBrush />,
+         },
+      ],
    },
    {
       id: 4,
