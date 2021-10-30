@@ -78,7 +78,7 @@ const MyOrders = () => {
                            </span>{" "}
                            <span>{packageDetails.name}</span>
                         </h3>
-                        <p>{packageDetails.description}...</p>
+                        <p>{packageDetails.description}</p>
                         <div className="box_star">
                            <Rating
                               initialRating={packageDetails.rating}

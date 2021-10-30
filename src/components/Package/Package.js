@@ -16,6 +16,7 @@ const Package = (props) => {
       history.push(`/orders/myOrders/${_id}`);
       const buyer = user.displayName;
       const email = user.email;
+      const status = "Pending";
       const newCart = {
          name,
          description,
@@ -25,6 +26,7 @@ const Package = (props) => {
          rating,
          buyer,
          email,
+         status,
       };
       const url = "https://infinite-mountain-42809.herokuapp.com/orders";
       fetch(url, {
@@ -36,9 +38,9 @@ const Package = (props) => {
       })
          .then((res) => res.json())
          .then((data) => {
+            console.log(data);
             if (data.insertedId) {
                alert("Successfully added to order list");
-               props.handleOrderLoader(data);
             }
          });
    };

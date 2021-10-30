@@ -3,7 +3,7 @@ import * as FaIcons from "react-icons/fa";
 import Rating from "react-rating";
 import "./PersonalOrder.css";
 const PersonalOrder = ({ order }) => {
-   const { name, discountPrice, previousPrice, rating, img } = order;
+   const { name, discountPrice, previousPrice, rating, img, status } = order;
    return (
       <div>
          <div className="col">
@@ -24,6 +24,7 @@ const PersonalOrder = ({ order }) => {
                      ${discountPrice} <span>${previousPrice}</span>
                   </div>
                </div>
+               <h3 className="text-center text-success fw-3">{status}</h3>
             </div>
          </div>
       </div>

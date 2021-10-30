@@ -44,6 +44,25 @@ const ManagePackages = () => {
             });
       }
    };
+   const statusChanged = { status: "Approved" };
+   const handleUpdateStatus = (id) => {
+      const url = `https://infinite-mountain-42809.herokuapp.com/orders/${id}`;
+      fetch(url, {
+         method: "PUT",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(statusChanged),
+      })
+         .then((res) => res.json())
+         .then((data) => {
+            console.log(data);
+            if (data.modifiedCount > 0) {
+               alert("Modified Successfully");
+            }
+         });
+   };
+
    return (
       <div className="package_wrapper">
          <OrderNav></OrderNav>
@@ -105,15 +124,18 @@ const ManagePackages = () => {
                               ${order.discountPrice}{" "}
                               <span>${order.previousPrice}</span>
                            </div>
+                           <p>{order.status}</p>
                         </div>
                      </div>
-                     <div className="col-12 col-md-2 m-auto">
+                     <div className="col-12 col-md-2 m-auto text-center">
                         <button
+                           onClick={() => handleUpdateStatus(order._id)}
                            className="btn_book"
                            style={{ fontSize: "3rem" }}
                         >
                            <GrIcons.GrDocumentUpdate />
                         </button>
+                        <br />
                      </div>
                      <div className="col-12 col-md-2 m-auto">
                         <button
