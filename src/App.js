@@ -7,6 +7,7 @@ import AddServices from "./components/AddServices/AddServices";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 import Header from "./components/Header/Header";
+import MyOrders from "./components/MyOrders/MyOrders";
 import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./components/NotFound/NotFound";
 import Packages from "./components/Packages/Packages";
@@ -50,6 +51,9 @@ function App() {
                   <PrivateRoute exact path="/orders">
                      <Orders></Orders>
                   </PrivateRoute>
+                  <Route path="/orders/myOrders/:orderId">
+                     <MyOrders></MyOrders>
+                  </Route>
                   <PrivateRoute path="/orders/addPackage">
                      <AddPackages></AddPackages>
                   </PrivateRoute>

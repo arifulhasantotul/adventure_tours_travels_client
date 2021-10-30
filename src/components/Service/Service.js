@@ -23,7 +23,7 @@ const Service = (props) => {
                   />
                </div>
 
-               <button className="btn_book">Book Now</button>
+               {/* <button className="btn_book">Book Now</button> */}
             </div>
          </div>
       </div>

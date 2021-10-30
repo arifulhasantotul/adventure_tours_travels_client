@@ -26,7 +26,7 @@ const Services = () => {
          <article className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {services &&
                services.map((item) => (
-                  <Service key={item.key} service={item}></Service>
+                  <Service key={item._id} service={item}></Service>
                ))}
             {!services &&
                [1, 2, 3, 4, 5, 6].map((n) => (

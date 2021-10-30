@@ -26,7 +26,7 @@ const Gallery = () => {
          <article className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
             {photos &&
                photos.map((item) => (
-                  <GalleryItem key={item.key} photos={item}></GalleryItem>
+                  <GalleryItem key={item._id} photos={item}></GalleryItem>
                ))}
             {!photos &&
                [1, 2, 3, 4, 5, 6].map((n) => (

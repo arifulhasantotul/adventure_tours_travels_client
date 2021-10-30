@@ -1,0 +1,51 @@
+.myOrder_wrapper {
+   padding: 5rem 4% 5rem 12%;
+   background: var(--fade-white);
+}
+.myOrder_wrapper .card {
+   border-radius: 0.5rem;
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+.myOrder_wrapper .card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.myOrder_wrapper .card .card-body h3 {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 2.4rem;
+   font-weight: 600;
+   color: var(--sidebar_bg);
+}
+
+.myOrder_wrapper .card .card-body p {
+   font-size: 1.7rem;
+   color: #666;
+   padding: 1rem 0;
+}
+.myOrder_wrapper .card .card-body .location_icon {
+   font-size: 2rem;
+   color: var(--orange);
+}
+.myOrder_wrapper .card .card-body .box_star {
+   font-size: 1.7rem;
+   color: var(--orange);
+}
+.myOrder_wrapper .card .card-body .price {
+   font-size: 2.5rem;
+   color: var(--sidebar_bg);
+   padding-top: 1rem;
+}
+.myOrder_wrapper .card .card-body .price span {
+   color: #666;
+   font-size: 1.5rem;
+   text-decoration: line-through;
+}
+@media (max-width: 450px) {
+   .myOrder_wrapper .card {
+      padding-left: 6%;
+   }
+}
