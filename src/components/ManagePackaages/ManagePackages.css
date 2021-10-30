@@ -1,0 +1,41 @@
+.manage_package img {
+   height: 15rem;
+   max-width: 15rem;
+   object-fit: cover;
+}
+.manage_package h3 {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 2.4rem;
+   font-weight: 600;
+   color: var(--sidebar_bg);
+}
+.manage_package p {
+   font-size: 1.7rem;
+   color: #666;
+   padding: 1rem 0;
+}
+.manage_package .location_icon {
+   font-size: 2rem;
+   color: var(--orange);
+}
+.manage_package .box_star {
+   font-size: 1.7rem;
+   color: var(--orange);
+}
+.manage_package .price {
+   font-size: 2.5rem;
+   color: var(--sidebar_bg);
+   padding-top: 1rem;
+}
+.manage_package .price span {
+   color: #666;
+   font-size: 1.5rem;
+   text-decoration: line-through;
+}
+@media (max-width: 450px) {
+   .manage_package {
+      padding-left: 6%;
+   }
+}

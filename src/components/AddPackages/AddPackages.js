@@ -44,7 +44,8 @@ const AddPackages = () => {
    };
 
    return (
-      <div>
+      <div className="package_wrapper">
+         <OrderNav></OrderNav>
          <h1 className="heading">
             <span>a</span>
             <span>d</span>
@@ -58,7 +59,7 @@ const AddPackages = () => {
             <span>g</span>
             <span>e</span>
          </h1>
-         <OrderNav></OrderNav>
+
          <form className="form_login" onSubmit={handleSubmit}>
             <input type="text" placeholder="Package Name" ref={nameRef} />
             <input type="text" placeholder="Image url" ref={linkRef} />

@@ -6,6 +6,7 @@ import { useHistory } from "react-router";
 import useAuth from "../../hooks/useAuth";
 
 const Package = (props) => {
+   console.log(props);
    const { user } = useAuth();
    const history = useHistory();
    const { _id, description, discountPrice, img, name, previousPrice, rating } =
@@ -37,6 +38,7 @@ const Package = (props) => {
          .then((data) => {
             if (data.insertedId) {
                alert("Successfully added to order list");
+               props.handleOrderLoader(data);
             }
          });
    };
