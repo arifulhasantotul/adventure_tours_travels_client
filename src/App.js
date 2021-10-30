@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./components/NotFound/NotFound";
 import Packages from "./components/Packages/Packages";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Services from "./components/Services/Services";
 import AuthProvider from "./contexts/AuthProvider";
 import Home from "./Pages/Home/Home";
@@ -37,21 +38,21 @@ function App() {
                   <Route exact path="/gallery">
                      <Gallery></Gallery>
                   </Route>
-                  <Route path="/gallery/add">
+                  <PrivateRoute path="/gallery/add">
                      <AddGallery></AddGallery>
-                  </Route>
+                  </PrivateRoute>
                   <Route path="/services">
                      <Services></Services>
                   </Route>
-                  <Route path="/service/add">
+                  <PrivateRoute path="/service/add">
                      <AddServices></AddServices>
-                  </Route>
-                  <Route exact path="/orders">
+                  </PrivateRoute>
+                  <PrivateRoute exact path="/orders">
                      <Orders></Orders>
-                  </Route>
-                  <Route path="/orders/addPackage">
+                  </PrivateRoute>
+                  <PrivateRoute path="/orders/addPackage">
                      <AddPackages></AddPackages>
-                  </Route>
+                  </PrivateRoute>
                   <Route path="/login">
                      <Login></Login>
                   </Route>

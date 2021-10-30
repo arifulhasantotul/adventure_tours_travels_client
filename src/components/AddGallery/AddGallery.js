@@ -52,7 +52,7 @@ const AddGallery = () => {
             <span>y</span>
          </h1>
          <form className="form_login" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Service Name" ref={nameRef} />
+            <input type="text" placeholder="Gallery Name" ref={nameRef} />
             <input type="text" placeholder="Image url" ref={linkRef} />
             <input type="text" placeholder="Rating" ref={ratingRef} />
             <textarea

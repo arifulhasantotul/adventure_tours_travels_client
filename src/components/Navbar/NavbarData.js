@@ -1,5 +1,6 @@
 import React from "react";
 import * as BiIcons from "react-icons/bi";
+import * as FaIcons from "react-icons/fa";
 
 export const SidebarData = [
    {
@@ -32,14 +33,14 @@ export const SidebarData = [
             title: "Add Gallery",
             tClass: "sub_nav_link",
             path: "/gallery/add",
-            icon: <BiIcons.BiFace />,
+            icon: <BiIcons.BiImageAdd />,
          },
          {
             id: 32,
             title: "Manage Gallery",
             tClass: "sub_nav_link",
             path: "/gallery/manage",
-            icon: <BiIcons.BiBrush />,
+            icon: <FaIcons.FaUserCog />,
          },
       ],
    },
@@ -57,14 +58,14 @@ export const SidebarData = [
             title: "Add Service",
             tClass: "sub_nav_link",
             path: "/service/add",
-            icon: <BiIcons.BiFace />,
+            icon: <BiIcons.BiAddToQueue />,
          },
          {
             id: 102,
             title: "Manage Service",
             tClass: "sub_nav_link",
             path: "/service/manage",
-            icon: <BiIcons.BiBrush />,
+            icon: <FaIcons.FaUsersCog />,
          },
       ],
    },
