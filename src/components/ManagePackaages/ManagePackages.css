@@ -36,5 +36,14 @@
 @media (max-width: 450px) {
    .manage_package {
       padding-left: 6%;
+      text-align: center;
+   }
+   .manage_package img {
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+   }
+   .manage_package h3 {
+      justify-content: center;
    }
 }

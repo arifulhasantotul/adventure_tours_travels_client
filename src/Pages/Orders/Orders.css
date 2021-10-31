@@ -12,3 +12,8 @@
    color: var(--orange);
    text-decoration: underline;
 }
+@media (max-width: 450px) {
+   .orders a {
+      font-size: 45%;
+   }
+}

@@ -8,6 +8,9 @@ const OrderNav = () => {
             <NavLink activeClassName="selected" to="/orders/myOrders">
                My Orders
             </NavLink>
+            <NavLink activeClassName="selected" to="/orders/booking">
+               Booking
+            </NavLink>
             <NavLink activeClassName="selected" to="/orders/addPackage">
                Add Package
             </NavLink>

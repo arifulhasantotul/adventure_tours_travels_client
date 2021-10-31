@@ -12,6 +12,7 @@ const ManagePackages = () => {
    const [orders, setOrders] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
 
+   // load initial data
    useEffect(() => {
       setIsLoading(true);
       const url = "https://infinite-mountain-42809.herokuapp.com/orders";
@@ -22,6 +23,7 @@ const ManagePackages = () => {
          .finally(() => setIsLoading(false));
    }, []);
 
+   // delete from ui and db
    const handleDelete = (id) => {
       const deleteApi = window.confirm("Do you want to delete this?");
       if (deleteApi) {
@@ -45,6 +47,8 @@ const ManagePackages = () => {
             });
       }
    };
+
+   // update status
    const statusChanged = { status: "Approved" };
    const handleUpdateStatus = (id) => {
       const url = `https://infinite-mountain-42809.herokuapp.com/orders/${id}`;
@@ -66,6 +70,7 @@ const ManagePackages = () => {
          });
    };
 
+   // update status ui
    const handleRefresh = () => {
       setIsLoading(true);
       const URL = "https://infinite-mountain-42809.herokuapp.com/orders";
