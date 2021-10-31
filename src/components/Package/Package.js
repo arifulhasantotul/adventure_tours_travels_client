@@ -39,7 +39,12 @@ const Package = (props) => {
          .then((res) => res.json())
          .then((data) => {
             console.log(data);
-            if (data.insertedId) {
+            if (data.insertedId && !user.email) {
+               alert(
+                  "Successfully added to order list but you have to login to see orders list"
+               );
+            }
+            if (data.insertedId && user.email) {
                alert("Successfully added to order list");
             }
          });

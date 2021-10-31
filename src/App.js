@@ -59,9 +59,9 @@ function App() {
                   <PrivateRoute path="/orders/myOrders/">
                      <MyOrders></MyOrders>
                   </PrivateRoute>
-                  <Route path="/orders/booking">
+                  <PrivateRoute path="/orders/booking">
                      <Booking></Booking>
-                  </Route>
+                  </PrivateRoute>
                   <PrivateRoute path="/orders/addPackage">
                      <AddPackages></AddPackages>
                   </PrivateRoute>
