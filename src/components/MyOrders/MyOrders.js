@@ -12,10 +12,33 @@ import "./MyOrders.css";
 const MyOrders = () => {
    const { user } = useAuth();
    const [loading, setLoading] = useState(true);
+   const [filterOrderLoad, setFilterOrderLoad] = useState(true);
 
    const { orderId } = useParams();
    const [packageDetails, setPackageDetails] = useState({});
    const [orders, setOrders] = useState([]);
+   const userName = user.displayName;
+   const userEmail = user.email;
+
+   useEffect(() => {
+      setLoading(true);
+      setFilterOrderLoad(true);
+      const url = "https://infinite-mountain-42809.herokuapp.com/orders";
+      fetch(url)
+         .then((res) => res.json())
+         .then((data) => {
+            // filter orders product for personal order list
+            const filteredOrders = data.filter(
+               (item) => item.buyer === userName && item.email === userEmail
+            );
+            setOrders(filteredOrders);
+         })
+         .finally(() => {
+            setLoading(false);
+            setFilterOrderLoad(false);
+         });
+   }, [userName, userEmail]);
+
    useEffect(() => {
       const url = `https://infinite-mountain-42809.herokuapp.com/packages/${orderId}`;
       fetch(url)
@@ -23,25 +46,6 @@ const MyOrders = () => {
          .then((data) => setPackageDetails(data))
          .catch((error) => console.log(error));
    }, [orderId]);
-
-   useEffect(() => {
-      setLoading(true);
-      const url = "https://infinite-mountain-42809.herokuapp.com/orders";
-      fetch(url)
-         .then((res) => res.json())
-         .then((data) => {
-            setOrders(data);
-         })
-         .finally(() => setLoading(false));
-   }, []);
-
-   const userName = user.displayName;
-   const userEmail = user.email;
-
-   // filter orders product for personal order list
-   const filteredOrders = orders.filter(
-      (order) => order.buyer === userName && order.email === userEmail
-   );
 
    return (
       <div className="myOrder_wrapper">
@@ -114,7 +118,8 @@ const MyOrders = () => {
          </h1>
          <article className="personal_order row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
             {!loading &&
-               filteredOrders.map((order) => (
+               !filterOrderLoad &&
+               orders.map((order) => (
                   <PersonalOrder key={order._id} order={order}></PersonalOrder>
                ))}
             {loading &&

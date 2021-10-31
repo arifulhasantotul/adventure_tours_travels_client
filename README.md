@@ -1,11 +1,22 @@
 # Assignment-11: Adventure Travels Full Stack Website
 
-[Link-1]()
-[Link-2](https://adventure-f3ee7.web.app/).
+[Link-1](https://adventure-f3ee7.web.app/).
 
 ## Available Features
 
 In this project you will about below features
+
+### `Database`
+
+Using mongodb as a database for this site.
+
+### `Real data`
+
+Getting real data from database using herokuapp
+
+### `CRUD`
+
+CRUD operation is done via node express
 
 ### `Dynamic side navbar`
 
@@ -37,9 +48,7 @@ Responsive for all devices
 
 ### `Hosting`
 
-Hosted in Firebase to fix firebase reload 404 not found problem
-
-In firebase.json file implement below code
+Hosted in Firebase to fix firebase reload 404 not found problem add below code in firebase.json file
 {
 "hosting": {
 "public": "build",

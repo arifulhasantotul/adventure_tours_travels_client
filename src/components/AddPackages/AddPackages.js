@@ -61,16 +61,32 @@ const AddPackages = () => {
          </h1>
 
          <form className="form_login" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Package Name" ref={nameRef} />
-            <input type="text" placeholder="Image url" ref={linkRef} />
-            <input type="number" placeholder="Discount Price" ref={dPriceRef} />
-            <input type="number" placeholder="Normal Price" ref={priceRef} />
-            <input type="text" placeholder="Rating" ref={ratingRef} />
+            <input
+               type="text"
+               placeholder="Package Name"
+               ref={nameRef}
+               required
+            />
+            <input type="text" placeholder="Image url" ref={linkRef} required />
+            <input
+               type="number"
+               placeholder="Discount Price"
+               ref={dPriceRef}
+               required
+            />
+            <input
+               type="number"
+               placeholder="Normal Price"
+               ref={priceRef}
+               required
+            />
+            <input type="text" placeholder="Rating" ref={ratingRef} required />
             <textarea
                placeholder="Description"
                ref={descriptionRef}
                cols="20"
                rows="5"
+               required
             ></textarea>
             <input type="submit" value="Add Package" />
          </form>

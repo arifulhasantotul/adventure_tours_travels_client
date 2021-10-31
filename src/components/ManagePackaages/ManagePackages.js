@@ -59,6 +59,8 @@ const ManagePackages = () => {
             console.log(data);
             if (data.modifiedCount > 0) {
                alert("Modified Successfully");
+               const remaining = orders.filter((order) => order._id);
+               setOrders(remaining);
             }
          });
    };

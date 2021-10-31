@@ -52,14 +52,20 @@ const AddGallery = () => {
             <span>y</span>
          </h1>
          <form className="form_login" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Gallery Name" ref={nameRef} />
-            <input type="text" placeholder="Image url" ref={linkRef} />
-            <input type="text" placeholder="Rating" ref={ratingRef} />
+            <input
+               type="text"
+               placeholder="Gallery Name"
+               ref={nameRef}
+               required
+            />
+            <input type="text" placeholder="Image url" ref={linkRef} required />
+            <input type="text" placeholder="Rating" ref={ratingRef} required />
             <textarea
                placeholder="Description"
                ref={descriptionRef}
                cols="20"
                rows="5"
+               required
             ></textarea>
             <input type="submit" value="Add Gallery" />
          </form>
