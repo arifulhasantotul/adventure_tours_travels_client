@@ -11,6 +11,7 @@ const Booking = (e) => {
    const userEmail = user.email;
 
    const [orders, setOrders] = useState([]);
+   const [bookedInfoBtn, setBookedInfoBtn] = useState(false);
 
    const {
       register,
@@ -19,6 +20,7 @@ const Booking = (e) => {
       reset,
    } = useForm();
 
+   // getting orders for orders info
    useEffect(() => {
       const url = "https://infinite-mountain-42809.herokuapp.com/orders";
       fetch(url)
@@ -33,12 +35,14 @@ const Booking = (e) => {
          });
    }, [userName, userEmail]);
 
+   // use reduce to get total price
    let initialValue = 0;
    let bookedPrice = orders.reduce(function (previousValue, currentValue) {
       return previousValue + parseFloat(currentValue.discountPrice);
    }, initialValue);
-
    console.log(bookedPrice);
+
+   // hook form submit
    const onSubmit = (data) => {
       console.log(data);
       const url = "https://infinite-mountain-42809.herokuapp.com/bookings";
@@ -53,6 +57,7 @@ const Booking = (e) => {
          .then((data) => {
             if (data.insertedId) {
                alert("Bookings added successfully");
+               setBookedInfoBtn(true);
                reset();
             }
          });
@@ -119,9 +124,25 @@ const Booking = (e) => {
                {/* errors will return when field validation fails  */}
                {errors.date && <span className="error">Date is required</span>}
 
-               <input type="submit" value="Book Now" />
+               <input
+                  placeholder="Mobile"
+                  type="tel"
+                  {...register("mobile", { required: true })}
+               />
+               {/* errors will return when field validation fails  */}
+               {errors.mobile && (
+                  <span className="error">Mobile is required</span>
+               )}
+
+               <input type="submit" value="Mobile" />
             </form>
          </article>
+
+         {bookedInfoBtn && (
+            <div className="text-center pt-5">
+               <button className="btn_book">See Booked Information</button>
+            </div>
+         )}
       </section>
    );
 };
