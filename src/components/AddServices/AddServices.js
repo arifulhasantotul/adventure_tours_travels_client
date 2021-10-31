@@ -37,7 +37,7 @@ const AddServices = () => {
    };
 
    return (
-      <div>
+      <section className="package_wrapper">
          <h1 className="heading">
             <span>a</span>
             <span>d</span>
@@ -69,7 +69,7 @@ const AddServices = () => {
             ></textarea>
             <input type="submit" value="Add Service" />
          </form>
-      </div>
+      </section>
    );
 };
 

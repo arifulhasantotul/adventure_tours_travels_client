@@ -37,7 +37,7 @@ const AddGallery = () => {
    };
 
    return (
-      <div>
+      <section className="package_wrapper">
          <h1 className="heading">
             <span>a</span>
             <span>d</span>
@@ -69,7 +69,7 @@ const AddGallery = () => {
             ></textarea>
             <input type="submit" value="Add Gallery" />
          </form>
-      </div>
+      </section>
    );
 };
 

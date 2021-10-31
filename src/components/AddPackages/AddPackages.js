@@ -44,7 +44,7 @@ const AddPackages = () => {
    };
 
    return (
-      <div className="package_wrapper">
+      <section className="package_wrapper">
          <OrderNav></OrderNav>
          <h1 className="heading">
             <span>a</span>
@@ -95,7 +95,7 @@ const AddPackages = () => {
             ></textarea>
             <input type="submit" value="Add Package" />
          </form>
-      </div>
+      </section>
    );
 };
 
