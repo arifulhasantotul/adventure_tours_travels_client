@@ -1,23 +1,63 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import booking from "../../images/booking.svg";
 import OrderNav from "../../Pages/Orders/OrderNav";
 import "./Bookings.css";
 
-const Booking = () => {
-   const { user } = useAuth();
+const Booking = (e) => {
+   const { user, error } = useAuth();
    const userName = user.displayName;
    const userEmail = user.email;
-   const nameRef = useRef();
-   const linkRef = useRef();
-   const arrivalRef = useRef();
-   const leaveRef = useRef();
-   const priceRef = useRef();
-   const itemRef = useRef();
 
-   const handleBook = (e) => {
-      e.preventDefault();
+   const [orders, setOrders] = useState([]);
+
+   const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset,
+   } = useForm();
+
+   useEffect(() => {
+      const url = "https://infinite-mountain-42809.herokuapp.com/orders";
+      fetch(url)
+         .then((res) => res.json())
+         .then((data) => {
+            // filter orders product for personal order list
+            const filteredOrders = data.filter(
+               (item) => item.buyer === userName && item.email === userEmail
+            );
+
+            setOrders(filteredOrders);
+         });
+   }, [userName, userEmail]);
+
+   let initialValue = 0;
+   let bookedPrice = orders.reduce(function (previousValue, currentValue) {
+      return previousValue + parseFloat(currentValue.discountPrice);
+   }, initialValue);
+
+   console.log(bookedPrice);
+   const onSubmit = (data) => {
+      console.log(data);
+      const url = "https://infinite-mountain-42809.herokuapp.com/bookings";
+      fetch(url, {
+         method: "POST",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(data),
+      })
+         .then((res) => res.json())
+         .then((data) => {
+            if (data.insertedId) {
+               alert("Bookings added successfully");
+               reset();
+            }
+         });
    };
+
    return (
       <section className="package_wrapper">
          <OrderNav></OrderNav>
@@ -34,46 +74,50 @@ const Booking = () => {
             <div className="col-12 col-lg-6">
                <img src={booking} className="img-fluid" alt="" />
             </div>
-            <form className="form_login col-12 col-lg-6" onSubmit={handleBook}>
+            {error && <div style={{ color: "red" }}></div>}
+            <form
+               className="form_login form_box col-12 col-lg-6"
+               onSubmit={handleSubmit(onSubmit)}
+            >
+               {/* register your input into the hook by invoking the "register" function */}
                <input
-                  type="text"
                   placeholder="Name"
-                  ref={nameRef}
+                  type="text"
                   defaultValue={userName}
-                  required
+                  {...register("name", { required: true })}
                />
+               {errors.name && (
+                  <span className="error"> Please click on your name</span>
+               )}
                <input
-                  type="text"
                   placeholder="Email"
+                  type="email"
                   defaultValue={userEmail}
-                  ref={linkRef}
                   readOnly
-                  required
+                  {...register("email", { required: true })}
                />
+
+               {errors.email && (
+                  <span className="error"> Please click on email</span>
+               )}
+
+               {/* include validation with required or other standard HTML validation rules */}
                <input
-                  type="date"
-                  placeholder="Arrivals"
-                  ref={arrivalRef}
-                  required
-               />
-               <input
-                  type="date"
-                  placeholder="Leaving"
-                  ref={leaveRef}
-                  required
-               />
-               <input
-                  type="number"
-                  placeholder="Leaving"
-                  ref={itemRef}
-                  required
-               />
-               <input
+                  placeholder="Address"
                   type="text"
-                  placeholder="Leaving"
-                  ref={priceRef}
-                  required
+                  {...register("address", { required: true })}
                />
+               {/* errors will return when field validation fails  */}
+               {errors.address && (
+                  <span className="error">Address is required</span>
+               )}
+               <input
+                  placeholder="Arrival"
+                  type="datetime-local"
+                  {...register("date", { required: true })}
+               />
+               {/* errors will return when field validation fails  */}
+               {errors.date && <span className="error">Date is required</span>}
 
                <input type="submit" value="Book Now" />
             </form>
