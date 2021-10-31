@@ -20,7 +20,7 @@ const MyOrders = () => {
    const userName = user.displayName;
    const userEmail = user.email;
 
-   useEffect(() => {
+   const handleOrderList = () => {
       setLoading(true);
       setFilterOrderLoad(true);
       const url = "https://infinite-mountain-42809.herokuapp.com/orders";
@@ -38,7 +38,7 @@ const MyOrders = () => {
             setLoading(false);
             setFilterOrderLoad(false);
          });
-   }, [userName, userEmail]);
+   };
 
    useEffect(() => {
       const url = `https://infinite-mountain-42809.herokuapp.com/packages/${orderId}`;
@@ -105,29 +105,37 @@ const MyOrders = () => {
             <div className="text-center text-danger">No new order booked</div>
          )}
 
-         <h1 className="heading">
-            <span>o</span>
-            <span>r</span>
-            <span>d</span>
-            <span>e</span>
-            <span>r</span>
-            <span className="space"></span>
-            <span>l</span>
-            <span>i</span>
-            <span>s</span>
-            <span>t</span>
-         </h1>
-         <article className="personal_order row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-            {!loading &&
-               !filterOrderLoad &&
-               orders.map((order) => (
+         <div className="text-center">
+            <button onClick={handleOrderList} className="btn_book">
+               Check Order List
+            </button>
+         </div>
+
+         {!filterOrderLoad && (
+            <h1 className="heading">
+               <span>o</span>
+               <span>r</span>
+               <span>d</span>
+               <span>e</span>
+               <span>r</span>
+               <span className="space"></span>
+               <span>l</span>
+               <span>i</span>
+               <span>s</span>
+               <span>t</span>
+            </h1>
+         )}
+         {!filterOrderLoad && (
+            <article className="personal_order row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+               {orders.map((order) => (
                   <PersonalOrder key={order._id} order={order}></PersonalOrder>
                ))}
-            {loading &&
-               [1, 2, 3, 4, 5, 6].map((n) => (
-                  <SkeletonPackages key={n} theme="light" />
-               ))}
-         </article>
+               {loading &&
+                  [1, 2, 3, 4, 5, 6].map((n) => (
+                     <SkeletonPackages key={n} theme="light" />
+                  ))}
+            </article>
+         )}
       </div>
    );
 };
