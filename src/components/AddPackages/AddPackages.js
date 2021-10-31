@@ -80,7 +80,12 @@ const AddPackages = () => {
                ref={priceRef}
                required
             />
-            <input type="text" placeholder="Rating" ref={ratingRef} required />
+            <input
+               type="text"
+               placeholder="Rating (<=5)"
+               ref={ratingRef}
+               required
+            />
             <textarea
                placeholder="Description"
                ref={descriptionRef}

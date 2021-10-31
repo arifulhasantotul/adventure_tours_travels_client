@@ -126,7 +126,16 @@ const ManagePackages = () => {
                               ${order.discountPrice}{" "}
                               <span>${order.previousPrice}</span>
                            </div>
-                           <p>{order.status}</p>
+                           <p
+                              className={
+                                 order?.status === "Pending"
+                                    ? " text-danger "
+                                    : " text-success"
+                              }
+                              style={{ fontWeight: "600" }}
+                           >
+                              {order.status}
+                           </p>
                         </div>
                      </div>
                      <div className="col-12 col-md-2 m-auto text-center">

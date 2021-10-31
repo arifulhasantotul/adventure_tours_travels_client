@@ -31,6 +31,7 @@ const MyOrders = () => {
             const filteredOrders = data.filter(
                (item) => item.buyer === userName && item.email === userEmail
             );
+
             setOrders(filteredOrders);
          })
          .finally(() => {

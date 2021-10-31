@@ -24,7 +24,16 @@ const PersonalOrder = ({ order }) => {
                      ${discountPrice} <span>${previousPrice}</span>
                   </div>
                </div>
-               <h3 className="text-center text-success fw-3">{status}</h3>
+               <h3
+                  className={
+                     status === "Pending"
+                        ? "text-center text-danger "
+                        : "text-center text-success"
+                  }
+                  style={{ fontWeight: "600" }}
+               >
+                  {status}
+               </h3>
             </div>
          </div>
       </div>
