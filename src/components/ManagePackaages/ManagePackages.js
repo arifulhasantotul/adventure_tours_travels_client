@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as FaIcons from "react-icons/fa";
+import * as FiIcons from "react-icons/fi";
 import * as GrIcons from "react-icons/gr";
 import * as MdIcons from "react-icons/md";
 import Rating from "react-rating";
@@ -63,6 +64,16 @@ const ManagePackages = () => {
                setOrders(remaining);
             }
          });
+   };
+
+   const handleRefresh = () => {
+      setIsLoading(true);
+      const URL = "https://infinite-mountain-42809.herokuapp.com/orders";
+      fetch(URL)
+         .then((res) => res.json())
+         .then((data) => setOrders(data))
+         .catch((error) => console.log(error))
+         .finally(() => setIsLoading(false));
    };
 
    return (
@@ -162,6 +173,12 @@ const ManagePackages = () => {
                   </div>
                </div>
             ))}
+         <div className="text-center">
+            <button onClick={handleRefresh} className="btn_book">
+               <FiIcons.FiRefreshCcw style={{ marginRight: "1rem" }} />
+               Refresh
+            </button>
+         </div>
       </div>
    );
 };
