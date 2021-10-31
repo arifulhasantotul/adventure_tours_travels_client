@@ -4,6 +4,7 @@ import "./App.css";
 import AddGallery from "./components/AddGallery/AddGallery";
 import AddPackages from "./components/AddPackages/AddPackages";
 import AddServices from "./components/AddServices/AddServices";
+import Booking from "./components/Bookings/Booking";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 import Header from "./components/Header/Header";
@@ -58,6 +59,9 @@ function App() {
                   <PrivateRoute path="/orders/myOrders/">
                      <MyOrders></MyOrders>
                   </PrivateRoute>
+                  <Route path="/orders/booking">
+                     <Booking></Booking>
+                  </Route>
                   <PrivateRoute path="/orders/addPackage">
                      <AddPackages></AddPackages>
                   </PrivateRoute>
