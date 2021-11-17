@@ -5,9 +5,9 @@ import { IconContext } from "react-icons/lib";
 import { useHistory } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import pic from "../../images/user.png";
-import "./Navbar.css";
 import { SidebarData } from "./NavbarData";
 import SubMenu from "./SubMenu";
+import "./Navbar.css";
 
 const Navbar = () => {
    const { user, handleLogout } = useAuth();

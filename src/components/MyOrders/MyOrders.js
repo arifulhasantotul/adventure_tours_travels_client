@@ -34,6 +34,7 @@ const MyOrders = () => {
 
             setOrders(filteredOrders);
          })
+
          .finally(() => {
             setLoading(false);
             setFilterOrderLoad(false);

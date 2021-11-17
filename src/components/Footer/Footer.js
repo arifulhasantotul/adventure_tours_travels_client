@@ -20,7 +20,7 @@ const Footer = () => {
             </article>
 
             <article className="box">
-               <h3>Braanch location</h3>
+               <h3>Branch location</h3>
                <NavLink to="/">India</NavLink>
                <NavLink to="/">Bangladesh</NavLink>
                <NavLink to="/">Japan</NavLink>

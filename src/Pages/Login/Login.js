@@ -27,11 +27,13 @@ const Login = () => {
 
    const handleGoogleSignIn = () => {
       setIsLoading(true);
-      signInUsingGoogle().then((result) => {
-         console.log(result.user);
-         history.push(redirect_uri);
-         setError("");
-      });
+      signInUsingGoogle()
+         .then((result) => {
+            console.log(result.user);
+            history.push(redirect_uri);
+            setError("");
+         })
+         .finally(() => setIsLoading(false));
    };
 
    const handleSignInUsingEmail = (email, password) => {

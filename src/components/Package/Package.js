@@ -13,7 +13,6 @@ const Package = (props) => {
       props.package;
 
    const handleOrder = () => {
-      history.push(`/orders/myOrders/${_id}`);
       const buyer = user.displayName;
       const email = user.email;
       const status = "Pending";
@@ -43,9 +42,11 @@ const Package = (props) => {
                alert(
                   "Successfully added to order list but you have to login to see orders list"
                );
+               history.push(`/orders/myOrders/${_id}`);
             }
             if (data.insertedId && user.email) {
                alert("Successfully added to order list");
+               history.push(`/orders/myOrders/${_id}`);
             }
          });
    };
